@@ -1,0 +1,269 @@
+/* Css Reset  */
+html {
+  font-size: 62.5%;
+}
+
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  direction: rtl;
+  box-sizing: border-box;
+  font-family: "Vazir";
+  background-color: var(--color-body-bg);
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #aaaaaa;
+}
+
+/* ---------- Font Faces ---------- */
+@font-face {
+  font-family: "Vazir";
+  src: url(/assets/fonts/Vazir-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vazir";
+  src: url(/assets/fonts/Vazir-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vazir";
+  src: url(/assets/fonts/Vazir-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url(/assets/fonts/Vazir-Black.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+/* ---------- Variable Css ---------- */
+:root {
+  --color-primary: #219f95;
+  --color-secondary: #234894;
+  --color-bg-btn: #afcedd;
+  --color-body-bg: #e6e6e6;
+  --color-h1: #1e1e1e;
+  --color-h2: #252525;
+  --color-text: #848484;
+  --color-bg-box: #fff;
+  --color-link: #007185;
+  --color-white: #fff;
+  --color-black: #000;
+}
+/* ---------- Object Oriented Css ---------- */
+.btn {
+  background-color: var(--color-primary);
+  border: 0;
+  border-radius: 8px;
+  padding: 2rem 0.5rem 1rem 0.5rem;
+  width: 115px;
+  height: 30px;
+  font-size: 1.1rem;
+  margin: 1rem 2rem 1rem 0;
+  color: var(--color-white);
+}
+.box {
+  background-color: var(--color-bg-box);
+  border: 0;
+  border-radius: 16px;
+  width: 310px;
+  height: 170px;
+}
+
+/* ---------- Start Css Code ---------- */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  padding: 2rem 5rem;
+  gap: 2rem 0.5rem;
+}
+.container h1 {
+  padding: 1rem 2rem;
+}
+.tickets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem 0.5rem;
+  margin: 1rem;
+}
+.ticket {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.ticket .ticket__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.ticket .ticket__information .ticket__information__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ticket .ticket__information .ticket__information__title p {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  margin: 0 0 0 1rem;
+  padding: 0.2rem 1rem 1.8rem 1rem;
+  border-radius: 5px;
+  background-color: var(--color-bg-btn);
+  font-size: 2rem;
+  font-weight: 900;
+}
+.ticket .ticket__information .ticket__information__title h2 {
+  color: var(--color-secondary);
+}
+
+.ticket .ticket__action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ticket .ticket__action p {
+  color: var(--color-text);
+  text-align: left;
+  margin: 1rem;
+}
+.ticket .ticket__action h3 {
+  text-align: center;
+}
+.ticket .ticket__information .ticket__information__author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ticket .ticket__information .ticket__information__author h3 {
+  font-size: 1.4rem;
+}
+.ticket .ticket__information .ticket__information__author img {
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 1rem;
+  border-radius: 10px;
+}
+.ticket .ticket__action .ticket__action__view-btn {
+  cursor: pointer;
+}
